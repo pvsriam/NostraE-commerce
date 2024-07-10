@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cstyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Banner -->
+    <section>
+        <div id="banner" class="banner  h-9 py-1 w-full flex justify-center items-center" style="background-color: #1D232C;">
+            <h1 class="text-center px-28 sm:text-xs md:text-xl lg:text-xl text-white" style="background-color: #1D232C;">Sign Up and <b>Get 20% OFF</b> for your first order</h1>
+
+            <h1 id="close" class="cursor-pointer text-white">X</h1>
+        </div>
+    </section>
+    <!-- Sidenav -->
+    <section>
+        <div class="sidenav flex gap-5 justify-between p-3 items-center">
+            <h1 class="font-bold text-2xl">Nostra</h1>
+
+            <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 w-5 h-5 md:hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+
+            <ul class="flex gap-5 text-xl hidden md:flex">
+                <li><a href="./index.html" class="hover:underline">Home</a></li>
+                <li><a href="#newarrival" class="hover:underline">New Arrival</a></li>
+                <li><a href="#mostwanted" class="hover:underline">Most Wanted</a></li>
+                <li><a href="./collections.html" class="hover:underline">Collections</a></li>
+                <li><a href="./contactus.html" class="hover:underline">Contact Us</a></li>
+            </ul>
+        </div>
+     </section>
+     <!-- Responsive Sidenav -->
+
+     <section id="sidenav" class="bg-green-100 w-1/2 h-screen fixed z-10 top-0 transition-all duration-1000 -left-1/2" style="background-color: #1D232C;">
+        <div class="text-right p-5">
+            <p class="inline cursor-pointer " id="closenav">X</p>
+        </div>
+        <ul class="flex gap-10 text-xl flex-col items-center text-white">
+            <li><a href="./index.html" class="hover:underline">Home</a></li>
+            <li><a href="#newarrival" class="hover:underline">New Arrival</a></li>
+            <li><a href="#mostwanted" class="hover:underline">Most Wanted</a></li>
+            <li><a href="./collections.html" class="hover:underline">Collections</a></li>
+            <li><a href="./contactus.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+     </section>
+
+    <!-- Search Function -->
+    <div class="searchcontainer flex justify-between border border-black items-center w-1/2 mx-auto px-2 rounded-md">
+        <input type="text" name="searchbox" id="searchbox" placeholder="Search" class="p-1 w-full outline-none">
+        <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+    </div>
+
+    <!-- Main Content -->
+    <!-- New flex container to align filter, vertical line, and products section side by side -->
+    <div class="flex justify-center mt-4 ">
+        <!-- Filter Section -->
+        <!-- Changed width to w-48 -->
+        <section class="mx-7 w-48 mt-2 flex flex-col sm:-ml-44 md:-ml-36  lg:-ml-80">
+            <div class="occasion-container mb-16">
+                <h1 class="font-bold text-2xl py-3">Occasion</h1>
+                <input type="checkbox" value="summer"> Summer <br>
+                <input type="checkbox" value="party"> Party <br>
+                <input type="checkbox" value="beach"> Beach
+            </div>
+
+            <div class="colors-container mb-12">
+                <h1 class="font-bold text-2xl">Colors</h1>
+                <input type="checkbox" value="red"> Red <br>
+                <input type="checkbox" value="blue"> Blue <br>
+                <input type="checkbox" value="white"> White <br>
+                <input type="checkbox" value="green"> Green
+            </div>
+
+            <div class="arrival-container">
+                <h1 class="font-bold text-2xl">Arrival</h1>
+                <input type="checkbox" value="new"> New <br>
+                <input type="checkbox" value="old"> Old
+            </div>
+        </section>
+
+        <!-- Vertical Line -->
+        <!-- Adjusted the height to match the content and added mx-4 for margin -->
+        <div class="w-px h-auto mx-5 bg-black"></div>
+
+        <!-- Products Container -->
+        <!-- Changed width to w-2/3 and grid gap to gap-8 -->
+        <div class="products-container grid grid-cols-3 gap-8 w-2/4 sm:ml-5">
+            <div class="first" data-occasion="summer" data-color="red" data-arrival="new">
+                <img src="./f1.jpg" alt="">
+                <h1 class=" font-bold sm:text-sm gap-8 md:text-xl">Floral Summer Shirt</h1>
+                <h2>Rs.220</h2>
+            </div>
+            <div class="first" data-occasion="summer" data-color="green" data-arrival="old">
+                <img src="./f2.jpg" alt="">
+                <h1 class="font-bold sm:text-sm  md:text-xl">Summer Green</h1>
+                <h2>Rs.260</h2>
+            </div>
+            <div class="first" data-occasion="party" data-color="blue" data-arrival="new">
+                <img src="./f3.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Party Floral Shirt</h1>
+                <h2>Rs.399</h2>
+            </div>
+            <div class="first" data-occasion="summer" data-color="red" data-arrival="new">
+                <img src="./f4.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Floral Summer Shirt</h1>
+                <h2>Rs.399</h2>
+            </div>
+            <div class="first" data-occasion="beach" data-color="blue" data-arrival="old">
+                <img src="./f5.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Beach Shirt</h1>
+                <h2>Rs.220</h2>
+            </div>
+            <div class="first" data-occasion="party" data-color="red" data-arrival="new">
+                <img src="./f6.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Shirt Party Red</h1>
+                <h2>Rs.579</h2>
+            </div>
+            <div class="first" data-occasion="party" data-color="blue" data-arrival="new">
+                <img src="./f3.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Party Floral Shirt</h1>
+                <h2>Rs.499</h2>
+            </div>
+            <div class="first" data-occasion="summer" data-color="red" data-arrival="new">
+                <img src="./f1.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Floral Summer Shirt</h1>
+                <h2>Rs.399</h2>
+            </div>
+            <div class="first" data-occasion="summer" data-color="white" data-arrival="old">
+                <img src="./f4.jpg" alt="">
+                <h1 class="sm:text-sm font-bold md:text-xl">Summer White</h1>
+                <h2>Rs.379</h2>
+            </div>
+        </div>
+    </div>
+    <!-- News Letter Section -->
+    <section>
+        <div class="joinnow py-16">
+            <h1 class="sm:text-xl font-bold text-center md:text-xl lg:text-5xl">Join our News Letter</h1>
+            <h3 class="sm:text-xl text-center md:text-xl lg:text-2xl">Signup for our email newspaper to get exclusive discounts, updates, and more</h3>
+            <div class="input flex justify-center items-center">
+                <input type="text" class="border border-black w-8/12 mx-auto mt-3 h-9">
+            </div>
+            <div class="flex justify-center items-center pt-5">
+                <button class="bg-gray-400 p-2 w-52 text-white rounded-md text-2xl">Subscribe  <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <section>
+        <div class="footer w-full p-5 " style="background-color: #1D232C;">
+            <h1 class=" text-white font-medium p-8 sm:text-2xl md:text-3xl lg:text-4xl">Nostra</h1>
+            <h2 class="sm:text-2xl md:text-3xl lg:text-4xl p-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi amet, deleniti adipisci repellendus interest</h2>
+            <div class="icons gap-8 flex pl-8 py-5">
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            </div>
+            <h1 class="text-white pl-8">&commat; 2023 Nostra.com</h1>
+        </div>
+    </section>
+    <script src="./product.js"></script>
+</body>
+</html>

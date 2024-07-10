@@ -1,0 +1,32 @@
+.img::-webkit-scrollbar {
+    display: none;
+}
+body{
+    font-family: 'poppins',sans-serif;
+}
+.img{
+    padding-left: 20px;
+}
+#imgbox img{
+    height: 550px;
+    width:1550px;
+}
+.summer__collections{
+    top: 255px;
+    left: 750px;
+}
+.shopnow__button{
+ background-color: white;
+ color: black;
+ position: absolute;
+ top: 290px;
+ left: 780px;
+}
+.inner{
+    background-color: #F2F4F7;
+}
+
+.innerimg>img{
+    filter: brightness(45%);
+}
+
